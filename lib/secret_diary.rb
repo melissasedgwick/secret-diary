@@ -1,11 +1,16 @@
 class SecretDiary
 
+  def initialize
+    @entries = []
+  end
+
   def add_entry(entry)
-    @entry = entry.to_s
+    @entries << entry.to_s
+    return entry.to_s
   end
 
   def get_entries
-    @entry
+    @entries
   end
 
 end
