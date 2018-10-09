@@ -8,6 +8,7 @@ class SecretDiary
   end
 
   def add_entry(entry)
+    raise "Unable to add entry: diary locked" if @status == "locked"
     @entries << entry.to_s
     return entry.to_s
   end
