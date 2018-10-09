@@ -20,4 +20,8 @@ class SecretDiary
     @status = "locked"
   end
 
+  def unlock
+    @status = "unlocked"
+  end
+
 end
