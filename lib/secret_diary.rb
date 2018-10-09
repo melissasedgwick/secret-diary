@@ -4,7 +4,7 @@ class SecretDiary
 
   def initialize
     @entries = []
-    @status = "unlocked"
+    @status = "locked"
   end
 
   def add_entry(entry)

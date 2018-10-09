@@ -17,13 +17,17 @@ describe SecretDiary do
     expect(subject.get_entries).to eq (["Hello", "Goodbye"])
   end
 
+  it 'is locked when initiating' do
+    expect(subject.status).to eq("locked")
+  end
+
   it 'allows you to lock diary' do
+    subject.unlock
     subject.lock
     expect(subject.status).to eq ("locked")
   end
 
   it 'allows you to unlock diary' do
-    subject.lock
     subject.unlock
     expect(subject.status).to eq("unlocked")
   end
