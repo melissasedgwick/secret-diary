@@ -39,4 +39,8 @@ describe SecretDiary do
     expect { subject.add_entry("Hello") }.to raise_error("Unable to add entry: diary locked")
   end
 
+  it 'does not allow you to get entries when locked' do
+    expect { subject.get_entries }.to raise_error("Unable to get entries: diary locked")
+  end
+
 end
