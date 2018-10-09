@@ -24,4 +24,18 @@ describe Lock do
 
     end
 
+    describe '#change_lock' do
+
+      it 'changes status to locked if unlocked' do
+        2.times { subject.change_lock }
+        expect(subject.status).to eq("locked")
+      end
+
+      it 'changes status to unlocked if locked' do
+        subject.change_lock
+        expect(subject.status).to eq("unlocked")
+      end
+
+    end
+
   end
