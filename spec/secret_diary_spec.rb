@@ -17,4 +17,9 @@ describe SecretDiary do
     expect(subject.get_entries).to eq (["Hello", "Goodbye"])
   end
 
+  it 'allows you to lock diary' do
+    subject.lock
+    expect(subject.status).to eq ("locked")
+  end
+
 end

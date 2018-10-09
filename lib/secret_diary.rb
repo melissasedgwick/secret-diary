@@ -1,7 +1,10 @@
 class SecretDiary
 
+  attr_reader :status
+
   def initialize
     @entries = []
+    @status = "unlocked"
   end
 
   def add_entry(entry)
@@ -11,6 +14,10 @@ class SecretDiary
 
   def get_entries
     @entries
+  end
+
+  def lock
+    @status = "locked"
   end
 
 end
